@@ -1,6 +1,6 @@
-// create the team
 const generateTeam = team => {
-    // create the manager html
+
+    // manager HTML
     const generateManager = manager => {
         return `
         <div class="card employee-card">
@@ -19,7 +19,7 @@ const generateTeam = team => {
         `;
     };
 
-    // create the html for engineers
+    // engineer HTML
     const generateEngineer = engineer => {
         return `
         <div class="card employee-card">
@@ -31,14 +31,14 @@ const generateTeam = team => {
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li class="list-group-item">GitHub: ${engineer.getGitHub()}</li>
+                <li class="list-group-item">Office number: ${engineer.getGitHub()}</li>
             </ul>
         </div>
     </div>
-        `;    
+        `;
     };
 
-    // create the html for interns
+    // intern HTML
     const generateIntern = intern => {
         return `
         <div class="card employee-card">
@@ -50,18 +50,18 @@ const generateTeam = team => {
             <ul class="list-group">
                 <li class="list-group-item">ID: ${intern.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-                <li class="list-group-item">School: ${intern.getSchool()}</li>
+                <li class="list-group-item">Office number: ${intern.getSchool()}</li>
             </ul>
         </div>
     </div>
-        `;    
-    };
+        `;    };
 
     const html = [];
 
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))
+        .join("")
     );
     html.push(team
         .filter(employee => employee.getRole() === "Engineer")
