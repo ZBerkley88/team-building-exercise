@@ -11,7 +11,7 @@ const { resourceUsage } = require('process');
 
 
 
-const teamMembers = [];
+const team = [];
 
 console.log(
     '\nWelcome to the team generator!\nUse `npm run reset` to reset the dist/ folder\n'
@@ -23,7 +23,7 @@ function createTeam() {
             type: `list`,
             name: `addEmployee`,
             message: `Which type of member would you like to add to your team?`,
-            choices: ['Engineer', 'Intern', 'Manager', 'I am done building my team']
+            choices: ['Engineer', 'Intern',  'I am done building my team']
         }
     ])
             .then((userChoice) => {
@@ -32,11 +32,9 @@ function createTeam() {
                         addEngineer();
                     } else if (userChoice.addEmployee === 'Intern') {
                         addIntern();
-                    } else if (userChoice.addEmployee === 'Manager') {                        
-                        addManager();
-                    } else {
+                    }  else {
                         console.log('Your team is complete!')    
-                        console.log(teamMembers);
+                        console.log(team);
                         buildPage();
                     
                     }
@@ -101,8 +99,8 @@ function addManager() {
             answer.email,
             answer.officeNumber
         );
-        teamMembers.push(manager);
-        console.log(teamMembers);
+        team.push(manager);
+        console.log(team);
         createTeam();
     });
 }
@@ -165,8 +163,8 @@ function addEngineer() {
             answer.email,
             answer.github
         );
-        teamMembers.push(engineer);
-        console.log(teamMembers);
+        team.push(engineer);
+        console.log(team);
         createTeam();
     });
 }
@@ -228,18 +226,18 @@ function addIntern() {
             answer.email,
             answer.school
         );
-        teamMembers.push(intern);
-        console.log(teamMembers);
+        team.push(intern);
+        console.log(team);
         createTeam();
     });
 }
 
-function buildPage(data) {
-    fs.writeFileSync('./dist/index.html', generateHTML(data), err =>
+function buildPage() {
+    fs.writeFileSync('./dist/index.html', generateHTML(team), err =>
         err ? console.error(err) : console.log('Your webpage has been successfully generated!')
     );
 }
 
 
 
-createTeam();
+addManager();
