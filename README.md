@@ -1,5 +1,8 @@
 # Team Building Exercise
 
+![Team Building Exercise Screenshot](./assets/screenshot.png)
+![Video Link](https://drive.google.com/file/d/1AVQmUMkmYnVaYz7jPKfCnFfxMWQ9GN8o/view?usp=sharing)
+
 ## Description
 
 The purpose of this project was to create a Node.js command line application that takes information about employees and generates an HTML webpage the displays their information on individual cards.
