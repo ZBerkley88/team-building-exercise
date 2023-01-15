@@ -10,7 +10,7 @@ The scope of this project was larger than anything I had worked on previously - 
 
 ## Installation
 
-n/a 
+Run `npm i` to install all dependencies. Run `npm run test` to run the tests. After completing the inquirer prompts, open the `index.html` in the /dist folder to view the finished webpage. 
 
 ## Usage
 
