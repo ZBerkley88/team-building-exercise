@@ -1,7 +1,10 @@
 # Team Building Exercise
 
+## Screenshot
 ![Team Building Exercise Screenshot](./assets/screenshot.png)
-![Video Link](https://drive.google.com/file/d/1AVQmUMkmYnVaYz7jPKfCnFfxMWQ9GN8o/view?usp=sharing)
+
+## Video Demonstration
+[Video Demonstration](https://drive.google.com/file/d/1AVQmUMkmYnVaYz7jPKfCnFfxMWQ9GN8o/view?usp=sharing)
 
 ## Description
 
